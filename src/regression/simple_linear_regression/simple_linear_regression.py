@@ -39,3 +39,10 @@ plt.title('Salary vs Experience Test Set Results')
 plt.xlabel('years of experience')
 plt.ylabel('salary')
 plt.show()
+
+# let's predict the salary of people with 12 years and 20 years of experience, respectively
+print("Salary with 12 years of experience: "  + str(regressor.predict([[12]])))
+print("Salary with 12 years of experience: "  + str(regressor.predict([[20]])))
+
+# and finally, lets examine the model our training set created
+print("Salary = " + str(regressor.coef_) + " x YearsExperience + " + str(regressor.intercept_))
